@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Joke Generator</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playpen+Sans:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <div id="generatorArea">
+        <h1 id="firstTitle">If You Want Joke Click The Button<img src="cursor.svg" width="50px" height="auto" ></h1>
+        <button id="showJoke">Get Joke</button>
+    </div>  
+
+
+    <div id="jokeArea" style="display: none;">
+        <h2><%= category %></h2>
+        <p><%= joke %></p>
+        <p><%= setup %></p>
+        <p><%= delivery %>🤣</p>
+        <button id="getNewJoke">Get New Joke</button>
+    </div>
+
+    <script>
+        // Get Joke button click event
+        var showJokeButton = document.getElementById('showJoke');
+        var jokeArea = document.getElementById('jokeArea');
+        showJokeButton.addEventListener('click', function() {
+            showJokeButton.style.display = 'none';
+            jokeArea.style.display = 'block';
+        });
+
+        // Get New Joke button click event
+        var getNewJokeButton = document.getElementById('getNewJoke');
+        getNewJokeButton.addEventListener('click', function() {
+            location.reload();
+        });
+    </script>
+</body>
+</html
